@@ -25,6 +25,10 @@ var adminprefix = '2'
 /////////////////////////
 ////////////////////////
 
+client.on('ready',async () => {
+  client.channels.find(ch => ch.id === "471780735716556833" && ch.type === 'voice').join();
+});
+
  client.on('message', async msg => {
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
